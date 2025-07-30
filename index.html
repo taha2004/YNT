@@ -24,13 +24,14 @@
       background-color: #e9ecef;
     }
     nav a {
-      margin: 0 15px;
+      margin: 0 10px;
       text-decoration: none;
       color: #004080;
       font-weight: bold;
+      display: inline-block;
     }
     section {
-      padding: 2rem;
+      padding: 2rem 1rem;
       max-width: 900px;
       margin: auto;
     }
@@ -38,11 +39,45 @@
       list-style: square;
       padding-left: 20px;
     }
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .portfolio-item {
+      background-color: #fff;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .testimonial {
+      background-color: #ffffff;
+      border-left: 5px solid #004080;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
     footer {
       background-color: #004080;
       color: white;
       text-align: center;
       padding: 1rem;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+      section {
+        padding: 1.5rem 1rem;
+      }
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -55,6 +90,8 @@
   <nav>
     <a href="#about">About</a>
     <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#testimonials">Testimonials</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -72,6 +109,40 @@
       <li>Application Development</li>
       <li>SAP ERP Consultancy</li>
     </ul>
+  </section>
+
+  <section id="portfolio">
+    <h2>Our Portfolio</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <h3>Ecommerce Store for Fashion Brand</h3>
+        <p>Designed and developed a responsive Shopify store that increased sales by 40% in 3 months.</p>
+      </div>
+      <div class="portfolio-item">
+        <h3>Marketing Campaign for Tech Startup</h3>
+        <p>Managed digital ads and lead generation that drove 5,000+ qualified leads in 8 weeks.</p>
+      </div>
+      <div class="portfolio-item">
+        <h3>Custom ERP Module</h3>
+        <p>Built a tailored SAP ERP module for inventory and financials for a mid-size manufacturer.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial">
+      <p>"YNT Solutions helped us go from idea to launch in less than a month. Their ecommerce expertise is unmatched."</p>
+      <strong>- Sarah Malik, Founder of StyleZen</strong>
+    </div>
+    <div class="testimonial">
+      <p>"Thanks to their digital marketing efforts, our ROI tripled. Professional and results-driven team!"</p>
+      <strong>- Ahmed Khan, CEO of TekGrid</strong>
+    </div>
+    <div class="testimonial">
+      <p>"Their SAP consultants saved us weeks of work and streamlined our internal processes brilliantly."</p>
+      <strong>- Fatima Raza, Operations Manager at MacroTech</strong>
+    </div>
   </section>
 
   <section id="contact">
