@@ -15,8 +15,27 @@
     header {
       background-color: #004080;
       color: white;
-      padding: 2rem;
+      padding: 2rem 1rem;
       text-align: center;
+      position: relative;
+    }
+    header img.logo {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      height: 60px;
+    }
+    .banner {
+      background: url('https://via.placeholder.com/1200x400?text=Welcome+to+YNT+Solutions') no-repeat center center;
+      background-size: cover;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     }
     nav {
       text-align: center;
@@ -52,6 +71,12 @@
       border-radius: 5px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
+    .portfolio-item img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 0.5rem;
+    }
     .testimonial {
       background-color: #ffffff;
       border-left: 5px solid #004080;
@@ -83,9 +108,14 @@
 </head>
 <body>
   <header>
+    <img src="https://via.placeholder.com/120x60?text=YNT+Logo" alt="YNT Logo" class="logo" />
     <h1>YNT Solutions</h1>
     <p>Your Partner in Digital Growth & Transformation</p>
   </header>
+
+  <div class="banner">
+    Elevate Your Business with YNT Solutions
+  </div>
 
   <nav>
     <a href="#about">About</a>
@@ -115,14 +145,17 @@
     <h2>Our Portfolio</h2>
     <div class="portfolio-grid">
       <div class="portfolio-item">
+        <img src="https://via.placeholder.com/400x200?text=Fashion+Store" alt="Fashion Store" />
         <h3>Ecommerce Store for Fashion Brand</h3>
         <p>Designed and developed a responsive Shopify store that increased sales by 40% in 3 months.</p>
       </div>
       <div class="portfolio-item">
+        <img src="https://via.placeholder.com/400x200?text=Tech+Campaign" alt="Marketing Campaign" />
         <h3>Marketing Campaign for Tech Startup</h3>
         <p>Managed digital ads and lead generation that drove 5,000+ qualified leads in 8 weeks.</p>
       </div>
       <div class="portfolio-item">
+        <img src="https://via.placeholder.com/400x200?text=ERP+System" alt="ERP Module" />
         <h3>Custom ERP Module</h3>
         <p>Built a tailored SAP ERP module for inventory and financials for a mid-size manufacturer.</p>
       </div>
@@ -148,7 +181,7 @@
   <section id="contact">
     <h2>Contact Us</h2>
     <p>Email: <a href="mailto:contact@yntsolutions.com">contact@yntsolutions.com</a></p>
-    <p>Phone: +123-456-7890</p>
+    <p>Phone: +923142551995/p>
     <p>Location: Your City, Your Country</p>
   </section>
 
